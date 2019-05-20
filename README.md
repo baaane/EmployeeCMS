@@ -1,1 +1,1 @@
-# laravel-website
+# A simple website for beginner.
