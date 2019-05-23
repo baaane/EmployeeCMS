@@ -19,4 +19,14 @@ class TodoTest extends TestCase
 
 		$this->assertTrue($result);
 	}
+
+	/**
+	 * @test
+	 * @dataProvider Tests\DataProviders\TodoDataProvider::lists()
+	 */
+	public function it_should_get_todo_list($lists)
+	{
+		$lists = json_decode($lists);
+		$this->assertTrue(count($lists) > 0);
+	}
 }

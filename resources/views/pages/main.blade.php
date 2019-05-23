@@ -1,6 +1,6 @@
 @extends('layout.mainlayout')
 @section('content')
-	<div class="container">
+	<div class="container" id="wrap">
 		<div class="album text-muted">
 			<section class="personal">@include('pages.personal.info')</section>
 			<section class="todo">@include('pages.etc.todo')</section>
