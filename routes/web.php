@@ -17,6 +17,7 @@
 
 Route::group(['namespace' => 'Site'], function($router){
     $router->get('/', 'MainController@index');
-    $router->get('/todo', 'MainController@todo');
+    $router->get('/todo', 'MainController@todo')->name('todo');
+    $router->post('/todo', 'MainController@todo')->name('todo');
 });
 

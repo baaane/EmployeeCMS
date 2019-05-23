@@ -1,6 +1,6 @@
 <section class="jumbotron text-center">
 	<div class="container">
-		<h1 class="jumbotron-heading">Arianne Nicole</h1>
+		<h1 class="jumbotron-heading">BANE</h1>
 		<p class="lead text-muted">A simple website for beginner.</p>
 <!-- 		<p>
 		 	<a href="#" class="btn btn-primary">Main call to action</a>
