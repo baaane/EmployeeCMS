@@ -5,6 +5,8 @@ namespace WebApp\Http\Controllers\Site;
 use Illuminate\Http\Request;
 use WebModules\Todo\TodoList;
 use WebModules\Todo\TodoSave;
+use WebModules\Todo\TodoUpdate;
+use WebModules\Todo\TodoRemove;
 use WebApp\Repositories\TodoRepository;
 use WebApp\Http\Controllers\Controller;
 
@@ -16,17 +18,40 @@ class MainController extends Controller
 		return view('pages.main', compact('todo_list'));
 	}
 
-	public function todo(Request $request, TodoRepository $repo, TodoList $todo, TodoSave $save)
+	public function todo(Request $request, TodoRepository $repo, TodoList $todo, TodoSave $save, TodoUpdate $edit, TodoRemove $delete)
 	{
 		if ($request->ajax()){
 			$request->merge([
 				'data' => [
-						'todo' => $_POST['todo'],
-						'created_date' => now()
-					]
+					'id' => $request->id,
+					'todo' => $_POST['todo'],
+					'created_date' => now()
 				]
-			);
-			$lists = $todo->action($save);
+			]);
+
+			unset($request->id);
+			unset($request->_todo);
+
+			switch ($request->_action) {
+				case 'save':
+					# code...
+					$lists = $todo->action($save);
+					break;
+				
+				case 'edit':
+					# code...
+					$lists = $todo->action($edit);
+					break;
+
+				case 'delete':
+					# code...
+					$lists = $todo->action($delete);
+					break;
+				default:
+					# code...
+					break;
+			}
+			
 			$result = $todo->get();
 					    
 		    return response()->json(['success' => 'Success', 'data' => $result]);
