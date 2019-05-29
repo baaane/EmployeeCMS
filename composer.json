@@ -35,7 +35,8 @@
         "psr-4": {
             "App\\": "app/",
             "WebApp\\": "webapp/app/",
-            "WebModules\\": "webapp/src/"
+            "WebModules\\": "webapp/src/",
+            "Library\\": "webapp/library"
         },
         "classmap": [
             "database/seeds",
