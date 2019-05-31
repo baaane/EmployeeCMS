@@ -7,6 +7,7 @@ use WebModules\Todo\TodoList;
 use WebModules\Todo\TodoSave;
 use WebModules\Todo\TodoUpdate;
 use WebModules\Todo\TodoRemove;
+use Library\ImageUploader\ImageUpload;
 use WebApp\Repositories\TodoRepository;
 use WebApp\Http\Controllers\Controller;
 
@@ -56,5 +57,13 @@ class MainController extends Controller
 					    
 		    return response()->json(['success' => 'Success', 'data' => $result]);
 		}
+	}
+
+	public function upload()
+	{
+		$imageUploader = new ImageUpload();
+		$result = $imageUploader->upload('ottakae');
+
+		print_r($result);
 	}
 }
