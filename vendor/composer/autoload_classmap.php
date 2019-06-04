@@ -1584,6 +1584,7 @@ return array(
     'League\\Flysystem\\Util\\StreamHasher' => $vendorDir . '/league/flysystem/src/Util/StreamHasher.php',
     'Library\\ImageUploader\\DesktopImageController' => $baseDir . '/webapp/library/ImageUploader/src/Action/DesktopImageController.php',
     'Library\\ImageUploader\\ImageActionInterface' => $baseDir . '/webapp/library/ImageUploader/src/Action/ImageActionInterface.php',
+    'Library\\ImageUploader\\ImageTrait' => $baseDir . '/webapp/library/ImageUploader/src/Action/ImageTrait.php',
     'Library\\ImageUploader\\ImageUpload' => $baseDir . '/webapp/library/ImageUploader/src/Action/ImageUpload.php',
     'Library\\ImageUploader\\MobileImageController' => $baseDir . '/webapp/library/ImageUploader/src/Action/MobileImageController.php',
     'Library\\ImageUploader\\ThumbnailImageController' => $baseDir . '/webapp/library/ImageUploader/src/Action/ThumbnailImageController.php',

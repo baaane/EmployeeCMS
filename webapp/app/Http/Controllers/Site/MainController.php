@@ -62,8 +62,9 @@ class MainController extends Controller
 	public function upload()
 	{
 		$imageUploader = new ImageUpload();
-		$result = $imageUploader->upload('ottakae');
+		$result = $imageUploader->upload($_FILES['filename']);
 
+		echo '<pre>';
 		print_r($result);
 	}
 }

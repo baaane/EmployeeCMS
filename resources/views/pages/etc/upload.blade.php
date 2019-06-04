@@ -3,7 +3,10 @@
 	@csrf
 	<div class="form-group">
 		<div class="input-group mb-3">
-			<input type="file" name="filename" />
+			<input type="file" name="filename[]"/>
+			<input type="text" name="name[]"/>
+			<input type="file" name="filename[]"/>
+			<input type="text" name="name[]"/>
 			<div class="input-group-append">
 				<button class="btn btn-primary" type="submit">Submit</button>
 			</div>
