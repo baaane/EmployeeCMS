@@ -7,7 +7,7 @@ use WebModules\Todo\TodoList;
 use WebModules\Todo\TodoSave;
 use WebModules\Todo\TodoUpdate;
 use WebModules\Todo\TodoRemove;
-use Library\ImageUploader\ImageUpload;
+use Library\Baaane\ImageUploader\Action\ImageUploadGenerator;
 use WebApp\Repositories\TodoRepository;
 use WebApp\Http\Controllers\Controller;
 
@@ -61,7 +61,7 @@ class MainController extends Controller
 
 	public function upload()
 	{
-		$imageUploader = new ImageUpload();
+		$imageUploader = new ImageUploadGenerator(dirname($_SERVER['DOCUMENT_ROOT']).'/storage/app/public/');
 		$result = $imageUploader->upload($_FILES['filename']);
 
 		echo '<pre>';
