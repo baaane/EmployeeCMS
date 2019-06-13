@@ -3,7 +3,6 @@
 	@csrf
 	<div class="form-group">
 		<div class="input-group mb-3">
-			<input type="text" name="nameew"/>
 			<input type="file" name="filename"/>
 			<input type="text" name="new_name"/>
 			<div class="input-group-append">
