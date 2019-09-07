@@ -8,6 +8,7 @@ var Todo = function(){
 	$container = $('.todo-result');
 	var result = document.getElementById('result');	
 
+	//add
     $('body').on('click', '.todo-submit', function(e){
 		e.preventDefault();
 
@@ -32,6 +33,7 @@ var Todo = function(){
 	    });
     });
     
+    //edit
     $('body').on('click', '.btn.todo.edit', function(e){
 		e.preventDefault();
 
@@ -43,6 +45,7 @@ var Todo = function(){
 	    $('#update_'+id).show();
     });
 
+    //update
     $('body').on('click', '.btn.todo.update', function(e){
 		e.preventDefault();
 
@@ -73,6 +76,7 @@ var Todo = function(){
 
 	});
 
+    //delete
     $('body').on('click', '#del_btn', function(e){
 		e.preventDefault();
 

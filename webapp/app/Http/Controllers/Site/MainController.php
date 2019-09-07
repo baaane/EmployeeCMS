@@ -9,7 +9,6 @@ use WebModules\Todo\TodoUpdate;
 use WebModules\Todo\TodoRemove;
 use WebApp\Repositories\TodoRepository;
 use WebApp\Http\Controllers\Controller;
-use Library\Baaane\ImageUploader\Action\ImageUploader;
 
 class MainController extends Controller
 {
@@ -57,14 +56,5 @@ class MainController extends Controller
 					    
 		    return response()->json(['success' => 'Success', 'data' => $result]);
 		}
-	}
-
-	public function upload()
-	{
-		$imageUploader = new ImageUploader(dirname($_SERVER['DOCUMENT_ROOT']).'/storage/app/public/');
-		$result = $imageUploader->upload($_FILES['filename']);
-
-		echo '<pre>';
-		print_r($result);
 	}
 }
